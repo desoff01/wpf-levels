@@ -1,0 +1,42 @@
+﻿<Page x:Class="_4_level.PageEdit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:_4_level"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageEdit" Background="White"
+      IsVisibleChanged="visClientChanged">
+
+    <Grid>
+        <TextBlock Text="Редактировать запись" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Фамилия:" FontSize="15"/>
+            <TextBox Width="200" Name="TextBoxLastName" Text="{Binding FirstName}"/>
+
+            <TextBlock Text="Имя:" FontSize="15"/>
+            <TextBox Width="200" Name="TextBoxFirstName" Text="{Binding LastName}"/>
+
+            <TextBlock Text="Отчество:" FontSize="15"/>
+            <TextBox Width="200" Name="TextBoxPatronymic" Text="{Binding Patronymic}"/>
+
+            <TextBlock Text="День рождения:" FontSize="15"/>
+            <TextBox Width="200" Name="TextBoxBirthday" Text="{Binding Birthday}"/>
+
+            <TextBlock Text="Дата регистрации:" FontSize="15"/>
+            <TextBox Width="200" Name="TextBoxRegDate" Text="{Binding RegistrationDate}"/>
+
+            <TextBlock Text="Эл. почта:" FontSize="15"/>
+            <TextBox Width="200" Name="TextBoxEmail" Text="{Binding Email}"/>
+
+            <TextBlock Text="Номер телефона:" FontSize="15"/>
+            <TextBox Width="200" Name="TextBoxPhone" Text="{Binding Phone}"/>
+
+            <TextBlock Text="Пол:" FontSize="15"/>
+            <TextBox Width="200" Name="TextBoxGender" Text="{Binding GenderCode}"/>
+
+            <Button x:Name="ButtonEdit" Content="Edit" Width="200" Margin="0, 20" Click="ButtonEdit_clicked"/>
+        </StackPanel>
+    </Grid>
+</Page>
